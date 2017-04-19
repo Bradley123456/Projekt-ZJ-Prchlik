@@ -1,0 +1,35 @@
+
+        [
+        
+            {
+            "Name": "Big O'Forrest",
+            "Screen resolution": "1920x1080",
+            "Display mode": "Full screen",
+            "Graphic quality": "Beautiful"
+            },
+            {
+            "Name": "Bradley",
+            "Screen resolution": "1920x1080",
+            "Display mode": "Full screen",
+            "Graphic quality": "Fastest"
+            },
+            {
+            "Name": "Hawkins",
+            "Screen resolution": "3840x2160",
+            "Display mode": "Full screen",
+            "Graphic quality": "Fantastic"
+            },
+            {
+            "Name": "Jessica",
+            "Screen resolution": "1600x900",
+            "Display mode": "Windowed",
+            "Graphic quality": "Good"
+            },
+            {
+            "Name": "KcmoTv",
+            "Screen resolution": "1920x1080",
+            "Display mode": "Full screen",
+            "Graphic quality": "Simple"
+            }
+        ]               
+    

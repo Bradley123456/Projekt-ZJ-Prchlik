@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Dokumentace</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Dokumentace k nastavení a konfiguraci hry Rust</h1>
+            <h2>Obsah</h2>
+            <nav>
+                <ul>                        
+                    <li><a href="#uvod">Úvod</a></li>
+                    <li><a href="#metodika">Metodika</a></li>
+                    <li><a href="#popis">Popis elementů a atributů</a>
+                        <ul>
+                            <li><a href="#elementy">Elementy</a></li>
+                            <li><a href="#atributy">Atributy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#transformace">Popis transformace</a></li>
+                    <li><a href="#zaver">Závěr</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <section>
+                    <h2 id="uvod">Úvod</h2>
+                    <p>Projektová dokumentace k nastavení a konfiguraci hry Rust pro jednotlivé Steam uživatele, kteří mají nastavené audio, video, postavu a další.</p>
+                </section>
+                <section>
+                    <h2 id="metodika">Metodika</h2>
+                    <p>Všechny části tohoto projektu (soubory html, xml, xsd, xsl a json) jsem sepsal v programu NetBeans (IDE 8.1). Dále jsem použil validátor z webové stránky: 
+                        <a href="https://validator.w3.org/">validator.w3.org</a>, který zobrazil pouze varování ohledně ohraničení tabulky (měl bych použít css ale to v dokumentaci být nemá).
+                        Na pomoc a jako zdroj informací jsem použil webovou stránku: <a href="https://www.w3schools.com/">w3schools.com</a> a prezentace ze školního systému Moodle.</p>
+                </section>
+                <section>
+                    <h2 id="popis">Popis elementů a atributů</h2>
+                    <p>V následujících tabulkách jsou popsány všechny elementy a atributy.</p>
+                    <section>
+                        <h3 id="elementy">Elementy</h3>
+                    </section>
+                    <table border="1">
+                        <tr>
+                            <th>Název</th>
+                            <th>Typ a omezení</th>
+                            <th>Popis</th>
+                        </tr>
+                        <tr>
+                            <td>settingsRust</td>
+                            <td>complexType</td>
+                            <td>obsahuje celý projekt (5 nastavení hráčů)</td>
+                        </tr>
+                        <tr>
+                            <td>player</td>
+                            <td>complexType</td>
+                            <td>hráč - osobní nastavení a popis hráče</td>
+                        </tr>
+                        <tr>
+                            <td>character</td>
+                            <td>string</td>
+                            <td>jmeno uzivatele</td>
+                        </tr>
+                        <tr>
+                            <td>screen</td>
+                            <td>string</td>
+                            <td>rozliseni obrazovky</td>
+                        </tr>
+                        <tr>
+                            <td>profile</td>
+                            <td>complexType</td>
+                            <td>profil všech nastavení hráče</td>
+                        </tr>
+                        <tr>
+                            <td>options</td>
+                            <td>complexType</td>
+                            <td>základní nastavení</td>
+                        </tr>
+                        <tr>
+                            <td>field_of_view</td>
+                            <td>float 65-85</td>
+                            <td>zorné pole</td>
+                        </tr>
+                        <tr>
+                            <td>user_interface_scale</td>
+                            <td>float 0.5-1</td>
+                            <td>velikost rozhraní</td>
+                        </tr>
+                        <tr>
+                            <td>show_hud</td>
+                            <td>boolean</td>
+                            <td>zobrazení HUD</td>
+                        </tr>
+                        <tr>
+                            <td>show_chat</td>
+                            <td>boolean</td>
+                            <td>zobrazení chatu</td>
+                        </tr>
+                        <tr>
+                            <td>show_branding</td>
+                            <td>boolean</td>
+                            <td>zobrazení znacky Rustu v pravém horním rohu</td>
+                        </tr>
+                        <tr>
+                            <td>show_nametags</td>
+                            <td>boolean</td>
+                            <td>zobrazení jmen hráčů</td>
+                        </tr>
+                        <tr>
+                            <td>censor_nudity</td>
+                            <td>boolean</td>
+                            <td>cenzura nahoty</td>
+                        </tr>
+                        <tr>
+                            <td>graphics</td>
+                            <td>complexType</td>
+                            <td>grafické nastavení</td>
+                        </tr>
+                        <tr>
+                            <td>image_effects</td>
+                            <td>complexType</td>
+                            <td>nastavení efektů</td>
+                        </tr>
+                        <tr>
+                            <td>depth_of_field</td>
+                            <td>boolean</td>
+                            <td>ostrost/hloubka pole</td>
+                        </tr>
+                        <tr>
+                            <td>ambient_occlusion</td>
+                            <td>boolean</td>
+                            <td>absorbce okolí</td>
+                        </tr>
+                        <tr>
+                            <td>anti-aliasing</td>
+                            <td>string Off/FXAA/SMAA/TSSAA</td>
+                            <td>anti-aliasing</td>
+                        </tr>
+                        <tr>
+                            <td>high_quality_bloom</td>
+                            <td>boolean</td>
+                            <td>vysoká kvalita rostlin</td>
+                        </tr>
+                        <tr>
+                            <td>lens_dirt</td>
+                            <td>boolean</td>
+                            <td>nečistoty na objektu</td>
+                        </tr>
+                        <tr>
+                            <td>motion_blur</td>
+                            <td>boolean</td>
+                            <td>rozmazání při pohybu</td>
+                        </tr>
+                        <tr>
+                            <td>sun_shafts</td>
+                            <td>boolean</td>
+                            <td>sluneční paprsky</td>
+                        </tr>
+                        <tr>
+                            <td>sharpen</td>
+                            <td>boolean</td>
+                            <td>ostření</td>
+                        </tr>
+                        <tr>
+                            <td>vignet</td>
+                            <td>boolean</td>
+                            <td>tmavé rohy</td>
+                        </tr>
+                        <tr>
+                            <td>graphics_quality</td>
+                            <td>complexType</td>
+                            <td>nastavení kvality grafického zobrazení</td>
+                        </tr>
+                        <tr>
+                            <td>q.quality</td>
+                            <td>integer 0-5</td>
+                            <td>celková kvalita grafického zobrazení</td>
+                        </tr>
+                        <tr>
+                            <td>large_scale_occlusion</td>
+                            <td>boolean</td>
+                            <td>velké měřítko ostření</td>
+                        </tr>
+                        <tr>
+                            <td>grass_displacement</td>
+                            <td>boolean</td>
+                            <td>položení/posun trávy (po šlápnutí)</td>
+                        </tr>
+                        <tr>
+                            <td>shadow_cascades</td>
+                            <td>string No Cascades/2 Cascades/4 Cascades</td>
+                            <td>stínové kaskády</td>
+                        </tr>
+                        <tr>
+                            <td>water_quality</td>
+                            <td>integer 0-2</td>
+                            <td>kvalita vody</td>
+                        </tr>
+                        <tr>
+                            <td>water_reflections</td>
+                            <td>integer 0-2</td>
+                            <td>odraz ve vodě</td>
+                        </tr>
+                        <tr>
+                            <td>max_shadow_lights</td>
+                            <td>integer 0-3</td>
+                            <td>maximální počet stínových světel</td>
+                        </tr>
+                        <tr>
+                            <td>shader_level</td>
+                            <td>integer 100-600</td>
+                            <td>úroveň shaderu</td>
+                        </tr>
+                        <tr>
+                            <td>draw_distance</td>
+                            <td>integer 500-2500</td>
+                            <td>vykreslovací vzdálenost</td>
+                        </tr>
+                        <tr>
+                            <td>shadow_distance</td>
+                            <td>integer 50</td>
+                            <td>vzdálenost stínů - fixní hodnota atributu (50)</td>
+                        </tr>
+                        <tr>
+                            <td>anisotropic_filtering</td>
+                            <td>integer 1-16</td>
+                            <td>anisotropní filtrování</td>
+                        </tr>
+                        <tr>
+                            <td>parallax_mapping</td>
+                            <td>integer 0-2</td>
+                            <td>paralaxové mapování</td>
+                        </tr>
+                        <tr>
+                            <td>audio</td>
+                            <td>complexType</td>
+                            <td>nastavení zvuku</td>
+                        </tr>
+                        <tr>
+                            <td>master_volume</td>
+                            <td>decimal 0-1</td>
+                            <td>hlavní hlasitost</td>
+                        </tr>
+                        <tr>
+                            <td>music_volume</td>
+                            <td>decimal 0-1</td>
+                            <td>hlasitost hudby</td>
+                        </tr>
+                        <tr>
+                            <td>menu_music_volume</td>
+                            <td>decimal 0-1</td>
+                            <td>hlasitost hudby v menu</td>
+                        </tr>
+                        <tr>
+                            <td>voices_volume</td>
+                            <td>decimal 0-1</td>
+                            <td>hlasitost hlasů</td>
+                        </tr>
+                        <tr>
+                            <td>game_sounds_volume</td>
+                            <td>decimal 0-1</td>
+                            <td>hlasitost herních zvuků</td>
+                        </tr>
+                        <tr>
+                            <td>speaker_mode</td>
+                            <td>string Stereo/Prologic/4 speaker surround/5 speaker surround/5.1 surround/7.1 surround</td>
+                            <td>režim reproduktorů</td>
+                        </tr>
+                        <tr>
+                            <td>push_to_talk</td>
+                            <td>boolean</td>
+                            <td>mluvení po stisku tlačítka</td>
+                        </tr>
+                        <tr>
+                            <td>performace</td>
+                            <td>complexType</td>
+                            <td>nastavení výkonu</td>
+                        </tr>
+                        <tr>
+                            <td>max_gibs</td>
+                            <td>integer 0-10000</td>
+                            <td>maximální počet částic po výbuchu nebo rozpadu</td>
+                        </tr>
+                        <tr>
+                            <td>quality</td>
+                            <td>complexType</td>
+                            <td>kvalita</td>
+                        </tr>
+                        <tr>
+                            <td>particle</td>
+                            <td>integer 0-100</td>
+                            <td>částice</td>
+                        </tr>
+                        <tr>
+                            <td>object</td>
+                            <td>integer 0-200</td>
+                            <td>objekt</td>
+                        </tr>
+                        <tr>
+                            <td>tree</td>
+                            <td>integer 0-200</td>
+                            <td>strom</td>
+                        </tr>
+                        <tr>
+                            <td>terrain</td>
+                            <td>integer 0-100</td>
+                            <td>terén</td>
+                        </tr>
+                        <tr>
+                            <td>grass</td>
+                            <td>integer 0-100</td>
+                            <td>tráva</td>
+                        </tr>
+                        <tr>
+                            <td>decor</td>
+                            <td>integer 0-100</td>
+                            <td>dekorace (květiny)</td>
+                        </tr>
+                    </table>
+                    <section>
+                        <h3 id="atributy">Atributy</h3>
+                        <table border="1">
+                            <tr>
+                                <th>Název</th>
+                                <th>Typ a omezení</th>
+                                <th>Popis</th>
+                            </tr>
+                            <tr>
+                                <td>playerSteamId</td>
+                                <td>integer</td>
+                                <td>Steam ID hráče</td>
+                            </tr>
+                            <tr>
+                                <td>login</td>
+                                <td>string</td>
+                                <td>přihlašovací jméno</td>
+                            </tr>
+                            <tr>
+                                <td>gender</td>
+                                <td>string</td>
+                                <td>pohlaví postavy</td>
+                            </tr>
+                            <tr>
+                                <td>skinColor</td>
+                                <td>string</td>
+                                <td>barva kůže postavy</td>
+                            </tr>
+                            <tr>
+                                <td>aspectRatio</td>
+                                <td>string</td>
+                                <td>poměr stran obrazovky</td>
+                            </tr>
+                            <tr>
+                                <td>windowed</td>
+                                <td>boolean</td>
+                                <td>hraní v okně</td>
+                            </tr>
+                            <tr>
+                                <td>monitor</td>
+                                <td>string</td>
+                                <td>název monitoru, na kterém má být hra spuštěna</td>
+                            </tr>
+                            <tr>
+                                <td>profileId</td>
+                                <td>integer 0-5</td>
+                                <td>ID profilu (0-Fastest, 1-Fast, 2-Simple, 3-Good, 4-Beautiful, 5-Fantastic)</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>string  Fastest/Fast/Simple/Good/Beautiful/Fantastic)</td>
+                                <td>název profilu</td>
+                            </tr>
+                            <tr>
+                                <td>language</td>
+                                <td>string</td>
+                                <td>jazyk</td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>integer</td>
+                                <td>hodnota shadow_distance je fixní (50)</td>
+                            </tr>
+                            <tr>
+                                <td>button</td>
+                                <td>string</td>
+                                <td>tlačítko pro pro mluvení</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section>
+                    <h2 id="transformace">Popis transformace</h2>
+                    <p>Tato transformace vypíše jméno hráče, jeho rozlišení obrazovky, jestli hraje v okně nebo full screen a kvalitu jeho grafického zobrazení.</p>
+                    <p>V této transformaci jsem použil for-each pro projetí všech hráčů. Choose, který zjistí hodnotu atributu @windowed, pokud je jeho hodnota true, vypíše "Windowed" a pokud je
+                    jeho hodnota false, vypíše "Full screen". A dále jsem použil if pro psaní čárek, pokud je na konci, nenapíše čárku.</p>
+                </section>
+                <section>
+                    <h2 id="zaver">Závěr</h2>
+                    <p>Výsledkem tohoto projektu je zvalidovaná dokumentace, soubor xml s daty (nastavení hry Rust), xml schema k předchozímu souboru, soubor xsl a transformace do souboru json.</p>
+                </section>
+                <aside>
+                    <p>Vypracoval: David Prchlík<br>Semestr: 4.<br>Cvičení: liché pondělí 12:15-13:45<br>Cvičící: Ing. Jan Masner</p>
+                </aside>
+            </article>            
+        </main>
+        <footer>
+            Copyright, David Prchlík &copy; 2017
+        </footer>
+    </body>
+</html>

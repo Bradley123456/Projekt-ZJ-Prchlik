@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settingsRust xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Nastaveni_Rust_Prchlik.xsd">
+    <!--Player 1-->
+    <player playerSteamId="76561198036176648" login="bradleycz">
+        <character gender="male" skinColor="white">Bradley</character>
+        <screen aspectRatio="16:9" windowed="false" monitor="Display 1">1920x1080</screen>            
+        <profile profileId="0" name="Fastest" language="EN">
+            <oprions>
+                <field_of_view>75.0</field_of_view>
+                <user_interface_scale>1.0</user_interface_scale>
+                <show_hud>true</show_hud>
+                <show_chat>true</show_chat>
+                <show_branding>true</show_branding>
+                <show_nametags>true</show_nametags>
+                <censor_nudity>false</censor_nudity>
+            </oprions>
+            <graphics>
+                <image_effects>
+                    <depth_of_field>false</depth_of_field>
+                    <ambient_occlusion>false</ambient_occlusion>
+                    <anti-aliasing>Off</anti-aliasing>
+                    <high_quality_bloom>false</high_quality_bloom>
+                    <lens_dirt>true</lens_dirt>
+                    <motion_blur>false</motion_blur>
+                    <sun_shafts>true</sun_shafts>
+                    <sharpen>false</sharpen>
+                    <vignet>true</vignet>
+                </image_effects>
+                <graphics_quality>
+                    <g.quality>0</g.quality>
+                    <large_scale_occlusion>false</large_scale_occlusion>
+                    <grass_displacement>false</grass_displacement>
+                    <shadow_cascades>No Cascades</shadow_cascades>
+                    <water_quality>0</water_quality>
+                    <water_reflections>0</water_reflections>
+                    <max_shadow_lights>0</max_shadow_lights>
+                    <shader_level>300</shader_level>
+                    <draw_distance>1600</draw_distance>
+                    <shadow_distance value="50"/>
+                    <anisotropic_filtering>1</anisotropic_filtering>
+                    <parallax_mapping>0</parallax_mapping>
+                </graphics_quality>
+            </graphics>
+            <audio>
+                <master_volume>0.1</master_volume>
+                <music_volume>0.0</music_volume>
+                <menu_music_volume>0.2</menu_music_volume>
+                <voices_volume>1.0</voices_volume>
+                <game_sounds_volume>1.0</game_sounds_volume>
+                <speaker_mode>Stereo</speaker_mode>
+                <push_to_talk button="V">true</push_to_talk>
+            </audio>
+            <performance>
+                <max_gibs>100</max_gibs>
+                <quality>
+                    <particle>0</particle>
+                    <object>25</object>
+                    <tree>25</tree>
+                    <terrain>50</terrain>
+                    <grass>25</grass>
+                    <decor>25</decor>
+                </quality>
+            </performance>
+        </profile>
+    </player>
+    <!--Player 2-->
+    <player playerSteamId="76561198065668181" login="forrestcz">
+        <character gender="male" skinColor="black">Big O'Forrest</character>
+        <screen aspectRatio="16:9" windowed="false" monitor="Display 1">1920x1080</screen>            
+        <profile profileId="4" name="Beautiful" language="EN">
+            <oprions>
+                <field_of_view>75.0</field_of_view>
+                <user_interface_scale>0.9</user_interface_scale>
+                <show_hud>true</show_hud>
+                <show_chat>true</show_chat>
+                <show_branding>true</show_branding>
+                <show_nametags>true</show_nametags>
+                <censor_nudity>false</censor_nudity>
+            </oprions>
+            <graphics>
+                <image_effects>
+                    <depth_of_field>false</depth_of_field>
+                    <ambient_occlusion>true</ambient_occlusion>
+                    <anti-aliasing>TSSAA</anti-aliasing>
+                    <high_quality_bloom>true</high_quality_bloom>
+                    <lens_dirt>true</lens_dirt>
+                    <motion_blur>false</motion_blur>
+                    <sun_shafts>true</sun_shafts>
+                    <sharpen>true</sharpen>
+                    <vignet>true</vignet>
+                </image_effects>
+                <graphics_quality>
+                    <g.quality>4</g.quality>
+                    <large_scale_occlusion>false</large_scale_occlusion>
+                    <grass_displacement>true</grass_displacement>
+                    <shadow_cascades>2 Cascades</shadow_cascades>
+                    <water_quality>2</water_quality>
+                    <water_reflections>2</water_reflections>
+                    <max_shadow_lights>3</max_shadow_lights>
+                    <shader_level>500</shader_level>
+                    <draw_distance>2400</draw_distance>
+                    <shadow_distance value="50"/>
+                    <anisotropic_filtering>16</anisotropic_filtering>
+                    <parallax_mapping>2</parallax_mapping>
+                </graphics_quality>
+            </graphics>
+            <audio>
+                <master_volume>0.5</master_volume>
+                <music_volume>0.3</music_volume>
+                <menu_music_volume>0.7</menu_music_volume>
+                <voices_volume>1.0</voices_volume>
+                <game_sounds_volume>0.9</game_sounds_volume>
+                <speaker_mode>5.1 surround</speaker_mode>
+                <push_to_talk button="V">true</push_to_talk>
+            </audio>
+            <performance>
+                <max_gibs>5000</max_gibs>
+                <quality>
+                    <particle>50</particle>
+                    <object>50</object>
+                    <tree>50</tree>
+                    <terrain>50</terrain>
+                    <grass>50</grass>
+                    <decor>50</decor>
+                </quality>
+            </performance>
+        </profile>
+    </player>
+    <!--Player 3-->
+    <player playerSteamId="76561198009878755" login="hawkinscz">
+        <character gender="male" skinColor="brown">Hawkins</character>
+        <screen aspectRatio="16:9" windowed="false" monitor="Display 2">3840x2160</screen>            
+        <profile profileId="5" name="Fantastic" language="EN">
+            <oprions>
+                <field_of_view>75.0</field_of_view>
+                <user_interface_scale>0.8</user_interface_scale>
+                <show_hud>true</show_hud>
+                <show_chat>true</show_chat>
+                <show_branding>true</show_branding>
+                <show_nametags>true</show_nametags>
+                <censor_nudity>false</censor_nudity>
+            </oprions>
+            <graphics>
+                <image_effects>
+                    <depth_of_field>true</depth_of_field>
+                    <ambient_occlusion>true</ambient_occlusion>
+                    <anti-aliasing>TSSAA</anti-aliasing>
+                    <high_quality_bloom>true</high_quality_bloom>
+                    <lens_dirt>true</lens_dirt>
+                    <motion_blur>false</motion_blur>
+                    <sun_shafts>true</sun_shafts>
+                    <sharpen>true</sharpen>
+                    <vignet>true</vignet>
+                </image_effects>
+                <graphics_quality>
+                    <g.quality>5</g.quality>
+                    <large_scale_occlusion>true</large_scale_occlusion>
+                    <grass_displacement>true</grass_displacement>
+                    <shadow_cascades>4 Cascades</shadow_cascades>
+                    <water_quality>2</water_quality>
+                    <water_reflections>2</water_reflections>
+                    <max_shadow_lights>3</max_shadow_lights>
+                    <shader_level>600</shader_level>
+                    <draw_distance>2500</draw_distance>
+                    <shadow_distance value="50"/>
+                    <anisotropic_filtering>16</anisotropic_filtering>
+                    <parallax_mapping>2</parallax_mapping>
+                </graphics_quality>
+            </graphics>
+            <audio>
+                <master_volume>0.4</master_volume>
+                <music_volume>0.2</music_volume>
+                <menu_music_volume>0.6</menu_music_volume>
+                <voices_volume>1.0</voices_volume>
+                <game_sounds_volume>1.0</game_sounds_volume>
+                <speaker_mode>7.1 surround</speaker_mode>
+                <push_to_talk button="V">true</push_to_talk>
+            </audio>
+            <performance>
+                <max_gibs>10000</max_gibs>
+                <quality>
+                    <particle>100</particle>
+                    <object>200</object>
+                    <tree>200</tree>
+                    <terrain>100</terrain>
+                    <grass>100</grass>
+                    <decor>100</decor>
+                </quality>
+            </performance>
+        </profile>
+    </player>
+    <!--Player 4-->
+    <player playerSteamId="76561198291833652" login="kcmoyoutube">
+        <character gender="female" skinColor="black">KcmoTv</character>
+        <screen aspectRatio="16:9" windowed="false" monitor="Display 1">1920x1080</screen>            
+        <profile profileId="2" name="Simple" language="EN">
+            <oprions>
+                <field_of_view>75.0</field_of_view>
+                <user_interface_scale>0.9</user_interface_scale>
+                <show_hud>true</show_hud>
+                <show_chat>true</show_chat>
+                <show_branding>true</show_branding>
+                <show_nametags>true</show_nametags>
+                <censor_nudity>false</censor_nudity>
+            </oprions>
+            <graphics>
+                <image_effects>
+                    <depth_of_field>false</depth_of_field>
+                    <ambient_occlusion>false</ambient_occlusion>
+                    <anti-aliasing>FXAA</anti-aliasing>
+                    <high_quality_bloom>false</high_quality_bloom>
+                    <lens_dirt>true</lens_dirt>
+                    <motion_blur>false</motion_blur>
+                    <sun_shafts>false</sun_shafts>
+                    <sharpen>true</sharpen>
+                    <vignet>true</vignet>
+                </image_effects>
+                <graphics_quality>
+                    <g.quality>2</g.quality>
+                    <large_scale_occlusion>false</large_scale_occlusion>
+                    <grass_displacement>false</grass_displacement>
+                    <shadow_cascades>No Cascades</shadow_cascades>
+                    <water_quality>1</water_quality>
+                    <water_reflections>0</water_reflections>
+                    <max_shadow_lights>1</max_shadow_lights>
+                    <shader_level>400</shader_level>
+                    <draw_distance>2200</draw_distance>
+                    <shadow_distance value="50"/>
+                    <anisotropic_filtering>8</anisotropic_filtering>
+                    <parallax_mapping>0</parallax_mapping>
+                </graphics_quality>
+            </graphics>
+            <audio>
+                <master_volume>0.5</master_volume>
+                <music_volume>0.0</music_volume>
+                <menu_music_volume>0.5</menu_music_volume>
+                <voices_volume>1.0</voices_volume>
+                <game_sounds_volume>1.0</game_sounds_volume>
+                <speaker_mode>Stereo</speaker_mode>
+                <push_to_talk button="V">true</push_to_talk>
+            </audio>
+            <performance>
+                <max_gibs>100</max_gibs>
+                <quality>
+                    <particle>25</particle>
+                    <object>25</object>
+                    <tree>25</tree>
+                    <terrain>25</terrain>
+                    <grass>50</grass>
+                    <decor>0</decor>
+                </quality>
+            </performance>
+        </profile>
+    </player>
+    <!--Player 5-->
+    <player playerSteamId="76561198058543028" login="jessicanigri">
+        <character gender="female" skinColor="white">Jessica</character>
+        <screen aspectRatio="16:9" windowed="true" monitor="Display 1">1600x900</screen>            
+        <profile profileId="3" name="Good" language="EN">
+            <oprions>
+                <field_of_view>85.0</field_of_view>
+                <user_interface_scale>1.0</user_interface_scale>
+                <show_hud>true</show_hud>
+                <show_chat>true</show_chat>
+                <show_branding>false</show_branding>
+                <show_nametags>true</show_nametags>
+                <censor_nudity>false</censor_nudity>
+            </oprions>
+            <graphics>
+                <image_effects>
+                    <depth_of_field>false</depth_of_field>
+                    <ambient_occlusion>false</ambient_occlusion>
+                    <anti-aliasing>SMAA</anti-aliasing>
+                    <high_quality_bloom>true</high_quality_bloom>
+                    <lens_dirt>true</lens_dirt>
+                    <motion_blur>false</motion_blur>
+                    <sun_shafts>true</sun_shafts>
+                    <sharpen>true</sharpen>
+                    <vignet>true</vignet>
+                </image_effects>
+                <graphics_quality>
+                    <g.quality>3</g.quality>
+                    <large_scale_occlusion>false</large_scale_occlusion>
+                    <grass_displacement>true</grass_displacement>
+                    <shadow_cascades>No Cascades</shadow_cascades>
+                    <water_quality>1</water_quality>
+                    <water_reflections>1</water_reflections>
+                    <max_shadow_lights>2</max_shadow_lights>
+                    <shader_level>500</shader_level>
+                    <draw_distance>2300</draw_distance>
+                    <shadow_distance value="50"/>
+                    <anisotropic_filtering>8</anisotropic_filtering>
+                    <parallax_mapping>0</parallax_mapping>
+                </graphics_quality>
+            </graphics>
+            <audio>
+                <master_volume>0.6</master_volume>
+                <music_volume>0.3</music_volume>
+                <menu_music_volume>0.5</menu_music_volume>
+                <voices_volume>1.0</voices_volume>
+                <game_sounds_volume>0.9</game_sounds_volume>
+                <speaker_mode>Prologic</speaker_mode>
+                <push_to_talk button="V">true</push_to_talk>
+            </audio>
+            <performance>
+                <max_gibs>100</max_gibs>
+                <quality>
+                    <particle>50</particle>
+                    <object>75</object>
+                    <tree>100</tree>
+                    <terrain>50</terrain>
+                    <grass>50</grass>
+                    <decor>75</decor>
+                </quality>
+            </performance>
+        </profile>
+    </player>
+</settingsRust>

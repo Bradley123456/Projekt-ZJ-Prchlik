@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+    <xs:element name="settingsRust">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="player" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="character">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="gender" use="required"/>
+                                            <xs:attribute type="xs:string" name="skinColor" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="screen">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="aspectRatio" use="required"/>
+                                            <xs:attribute type="xs:boolean" name="windowed" use="required"/>
+                                            <xs:attribute type="xs:string" name="monitor" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="profile">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="oprions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="fov" name="field_of_view"/>
+                                                    <xs:element type="uis" name="user_interface_scale"/>
+                                                    <xs:element type="xs:boolean" name="show_hud"/>
+                                                    <xs:element type="xs:boolean" name="show_chat"/>
+                                                    <xs:element type="xs:boolean" name="show_branding"/>
+                                                    <xs:element type="xs:boolean" name="show_nametags"/>
+                                                    <xs:element type="xs:boolean" name="censor_nudity"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="graphics">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="image_effects">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:boolean" name="depth_of_field"/>
+                                                                <xs:element type="xs:boolean" name="ambient_occlusion"/>
+                                                                <xs:element type="aa" name="anti-aliasing"/>
+                                                                <xs:element type="xs:boolean" name="high_quality_bloom"/>
+                                                                <xs:element type="xs:boolean" name="lens_dirt"/>
+                                                                <xs:element type="xs:boolean" name="motion_blur"/>
+                                                                <xs:element type="xs:boolean" name="sun_shafts"/>
+                                                                <xs:element type="xs:boolean" name="sharpen"/>
+                                                                <xs:element type="xs:boolean" name="vignet"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="graphics_quality">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="quality" name="g.quality"/>
+                                                                <xs:element type="xs:boolean" name="large_scale_occlusion"/>
+                                                                <xs:element type="xs:boolean" name="grass_displacement"/>
+                                                                <xs:element type="cascades" name="shadow_cascades"/>
+                                                                <xs:element type="water" name="water_quality"/>
+                                                                <xs:element type="water" name="water_reflections"/>
+                                                                <xs:element type="msl" name="max_shadow_lights"/>
+                                                                <xs:element type="shader" name="shader_level"/>
+                                                                <xs:element type="dd" name="draw_distance"/>
+                                                                <xs:element name="shadow_distance">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:integer" name="value" use="required" fixed="50"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element type="anisotropic" name="anisotropic_filtering"/>
+                                                                <xs:element type="paralax" name="parallax_mapping"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="audio">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="audio" name="master_volume"/>
+                                                    <xs:element type="audio" name="music_volume"/>
+                                                    <xs:element type="audio" name="menu_music_volume"/>
+                                                    <xs:element type="audio" name="voices_volume"/>
+                                                    <xs:element type="audio" name="game_sounds_volume"/>
+                                                    <xs:element type="speaker" name="speaker_mode"/>
+                                                    <xs:element name="push_to_talk">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:boolean">
+                                                                    <xs:attribute type="xs:string" name="button" use="required"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="performance">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="gibs" name="max_gibs"/>
+                                                    <xs:element name="quality">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="q1" name="particle"/>
+                                                                <xs:element type="q2" name="object"/>
+                                                                <xs:element type="q2" name="tree"/>
+                                                                <xs:element type="q1" name="terrain"/>
+                                                                <xs:element type="q1" name="grass"/>
+                                                                <xs:element type="q1" name="decor"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="quality" name="profileId" use="optional"/>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="language" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:integer" name="playerSteamId" use="optional"/>
+                        <xs:attribute type="xs:string" name="login" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Omezeni -->
+    <xs:simpleType name="fov">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="65" />
+            <xs:maxInclusive value="85" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="uis">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.5" />
+            <xs:maxInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="aa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Off" />
+            <xs:enumeration value="FXAA" />
+            <xs:enumeration value="SMAA" />
+            <xs:enumeration value="TSSAA" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="quality">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="cascades">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="No Cascades" />
+            <xs:enumeration value="2 Cascades" />
+            <xs:enumeration value="4 Cascades" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="water">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="msl">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="shader">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="100" />
+            <xs:maxInclusive value="600" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="dd">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="500" />
+            <xs:maxInclusive value="2500" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="anisotropic">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="16" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="paralax">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="audio">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="speaker">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Stereo" />
+            <xs:enumeration value="Prologic" />
+            <xs:enumeration value="4 speaker surround" />
+            <xs:enumeration value="5 speaker surround" />
+            <xs:enumeration value="5.1 surround" />
+            <xs:enumeration value="7.1 surround" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="gibs">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="10000" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="q1">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="q2">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="200" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="profilename">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Fastest" />
+            <xs:enumeration value="Fast" />
+            <xs:enumeration value="Simple" />
+            <xs:enumeration value="Good" />
+            <xs:enumeration value="Beautiful" />
+            <xs:enumeration value="Fantastic" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
